@@ -18,6 +18,7 @@ This project demonstrates a Java-based Calculator application with automated tes
 
 ## Test Reports
 Test execution reports are generated using the Maven Surefire Plugin.
+
 Path:target/surefire-reports/
 Includes:
 - HTML report
