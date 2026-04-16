@@ -44,6 +44,28 @@ This command:
 - How Maven Surefire Plugin executes TestNG tests and generates reports
 - Version control using Git and pushing code to GitHub using terminal commands
 
+## Test Automation Best Practices Followed
+## ✅ Test Automation Best Practices Followed
+
+- **Descriptive Test Naming**
+  Test methods follow a clear naming convention:
+  methodName_condition_expectedResult  
+  Example: add_TwoIntegers_returnSum
+
+- **No Loops in Test Cases**
+  Each test validates a single scenario to keep tests simple and readable.
+
+- **No Exception Handling in Tests**
+  Exceptions are allowed to fail the test naturally, ensuring issues are not hidden.
+
+- **Avoid Code Duplication**
+  Common objects are declared as instance variables instead of creating them in every test method.
+
+- **No Input/Output Operations**
+  Tests are kept independent of external inputs like files or user input to ensure reliability.
+
+- **Use Mocking for External Dependencies**
+  External systems (e.g., database, APIs) should be mocked to keep tests fast and isolated.
 
 ## Test Execution Result
 

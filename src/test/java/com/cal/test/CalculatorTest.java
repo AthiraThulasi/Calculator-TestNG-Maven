@@ -17,19 +17,19 @@ public class CalculatorTest {
         assertEquals(calc.add(110, 111), 221.0);
     }
 
-    @Test(description = "Verify Calculator subtract functionality", groups = {"smoke", "sanity"})
+    @Test(description = "Verify Calculator subtract functionality", groups = {"unit","smoke", "sanity"})
     public void subtract_TwoIntegerNumbers_returnResult() {
         //Calculator calc = new Calculator();// to access the calculator class
         assertEquals(calc.subtract(500, 100), 400.0);
     }
 
-    @Test(description = "Verify Calculator multiply functionality", groups = {"smoke", "sanity"})
+    @Test(description = "Verify Calculator multiply functionality", groups = {"unit","smoke", "sanity"})
     public void multiply_TwoIntegerNumbers_returnResult() {
         //Calculator calc = new Calculator();// to access the calculator class
         assertEquals(calc.multiply(10, 111), 1110.0);
     }
 
-    @Test(description = "Verify Calculator divide functionality", groups = {"smoke", "sanity"})
+    @Test(description = "Verify Calculator divide functionality", groups = {"unit","smoke", "sanity"})
     public void divide_TwoIntegerNumbers_returnResult() {
         //Calculator calc = new Calculator();// to access the calculator class
         assertEquals(calc.divide(110, 1), 110.0);
