@@ -29,6 +29,12 @@ Includes:
 ## How to Run ?
 mvn clean test
 
+This command:
+- Removes old build files to ensure a fresh start
+- Compiles the project
+- Runs all TestNG test cases
+- Generates test reports using Maven Surefire Plugin
+
 ## Through this project, I gained understanding of:
 
 - Importance of standard Maven project structure for scalability and maintainability
