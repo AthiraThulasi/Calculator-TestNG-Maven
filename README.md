@@ -45,7 +45,6 @@ This command:
 - Version control using Git and pushing code to GitHub using terminal commands
 
 ## Test Automation Best Practices Followed
-## ✅ Test Automation Best Practices Followed
 
 - **Descriptive Test Naming**
   Test methods follow a clear naming convention:
