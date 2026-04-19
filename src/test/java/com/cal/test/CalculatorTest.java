@@ -31,14 +31,15 @@ public class CalculatorTest {
 
     @Test(description = "Verify Calculator divide functionality", groups = {"unit","smoke", "sanity"})
     public void divide_TwoIntegerNumbers_returnResult() {
-        //Calculator calc = new Calculator();// to access the calculator class
-        assertEquals(calc.divide(110, 1), 110.0);
+        assertEquals(calc.divide(110, 1), 110.0);// positive case // PASS
     }
 
-    /*@Test(description = "Verify Calculator division functionality", groups = {"unit","smoke", "sanity"},expectedExceptions = ArithmeticException.class)
-    public void divide_DivideNumberByZero_throwArithematicException() {
-        //Calculator calc = new Calculator();// to access the calculator class
-       calc.divide(20, 0);*/
+    @Test(description = "Verify division by zero throws exception",
+            groups = {"unit", "smoke", "sanity"},  // Negative Case
+            expectedExceptions = ArithmeticException.class)
+    public void divide_DivideNumberByZero_throwArithmeticException() {
+        calc.divide(20, 0);
+    }
 
 
 }
