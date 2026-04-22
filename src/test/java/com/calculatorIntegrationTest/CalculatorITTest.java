@@ -21,12 +21,12 @@ public class CalculatorIT {
         Calculator cal = new Calculator();
         // ✅ Ensure the integration test output directory is created inside target for storing test artifacts
         // ✅ This ensures that test results are generated inside the target directory when the Maven test runs.
-        File outputDir = new File("target/integrationTest");
+        File outputDir = new File("target/integrationTest");// ✅creates file in current working directory
         if (!outputDir.exists()) {
             outputDir.mkdirs();
         }
 
-        File outputFile = new File(outputDir,"CalIntegrationResult.txt");
+        File outputFile = new File(outputDir,"CalIntegrationResult.txt");// ✅parent child-creates file inside specific folder
         double addResult = cal.add(10,10);
         double subtractResult = cal.subtract(100,10);
         double multiplyResult = cal.multiply(20,10);
