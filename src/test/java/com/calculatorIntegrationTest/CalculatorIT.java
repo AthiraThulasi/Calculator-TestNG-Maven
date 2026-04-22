@@ -4,10 +4,10 @@ import org.apache.commons.io.FileUtils;
 import org.athira.Calculator;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.Assertion;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,12 +21,13 @@ public class CalculatorIT {
         Calculator cal = new Calculator();
         // ✅ Ensure the integration test output directory is created inside target for storing test artifacts
         // ✅ This ensures that test results are generated inside the target directory when the Maven test runs.
-        File outputDir = new File("target/integrationTest");// ✅creates file in current working directory
+        File outputDir = new File("target/integrationTest");// ✅// creates a File reference pointing to target/integrationTest directory
         if (!outputDir.exists()) {
-            outputDir.mkdirs();
+            outputDir.mkdirs();// Actually creates folder.
         }
-
+        // ✅ Define a file inside that path, and it gets created when we write data into it.
         File outputFile = new File(outputDir,"CalIntegrationResult.txt");// ✅parent child-creates file inside specific folder
+        //CalIntegrationResult.txt is the artifact we place in Target folder
         double addResult = cal.add(10,10);
         double subtractResult = cal.subtract(100,10);
         double multiplyResult = cal.multiply(20,10);
@@ -38,10 +39,16 @@ public class CalculatorIT {
                 String.valueOf(multiplyResult),
                 String.valueOf(divideResult)
         );
+        System.out.println("Writing to: " + outputFile.getAbsolutePath());
         FileUtils.writeLines(outputFile,outputLines);
         //✅FileUtils is a utility library in Apache commons I/O which supports reading, writing, copying, and deleting files and directories operation.
 
         //✅Check whether the file is created or not using assertion
         Assert.assertTrue(outputFile.exists(),"CalIntegrationResult.txt should be present");
+
+        // ✅Compare content of file with actual lines
+        List<String> actualLines = FileUtils.readLines(outputFile, StandardCharsets.UTF_8);
+        Assert.assertEquals(actualLines, outputLines,"mismatch found in lines");// comparing 2 lists
+
     }
 }
