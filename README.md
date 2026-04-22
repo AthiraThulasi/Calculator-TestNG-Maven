@@ -6,6 +6,7 @@ This project demonstrates a Java-based Calculator application with automated tes
 - Java
 - Maven
 - TestNG
+- Maven Plugins: Surefire, Failsafe, JaCoCo
 - Git & GitHub
 
 
@@ -14,7 +15,9 @@ This project demonstrates a Java-based Calculator application with automated tes
 - Automated test execution using TestNG
 - Maven-based project structure
 - Test execution using Maven lifecycle
-- Test reports generated using Maven Surefire Plugin
+- Unit test execution and HTML reports via Maven Surefire Plugin
+- Integration test execution via Maven Failsafe Plugin
+- Code coverage reports via JaCoCo Plugin
 
 ## Test Reports
 Test execution reports are generated using the Maven Surefire Plugin.
