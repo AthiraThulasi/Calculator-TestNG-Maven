@@ -7,7 +7,10 @@ This project demonstrates a Java-based Calculator application with automated tes
 - Maven
 - TestNG
 - Maven Plugins: Surefire, Failsafe, JaCoCo
-- Git & GitHub
+
+## Tools
+- IntelliJ IDEA (IDE)
+- Git & GitHub (version control)
 
 
 ## Features
