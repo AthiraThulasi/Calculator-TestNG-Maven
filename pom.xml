@@ -68,6 +68,41 @@
         </configuration>
       </plugin>
 
+      <!-- fireSafe Plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <version>3.5.5</version>
+        <executions>
+        <execution>
+
+          <goals>
+            <goal>
+            </goal>
+          </goals>
+        </execution>
+
+
+
+        </executions>
+
+
+
+
+
+
+
+
+
+
+
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+
 
     </plugins>
   </build>

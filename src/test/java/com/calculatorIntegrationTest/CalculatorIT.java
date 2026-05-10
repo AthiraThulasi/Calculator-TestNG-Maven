@@ -14,7 +14,7 @@ import java.util.List;
 
 // ✅Purpose
 //  To dump the result of each operation into a file
-//  We will crosscheck if the file is getting created(AAssertion)
+//  We will crosscheck if the file is getting created(Assertion)
 //  Cross check if the right content is written in the file(Assertion)
 public class CalculatorIT {
 
